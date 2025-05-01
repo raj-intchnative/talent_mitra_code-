@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8d7da;
+            color: #721c24;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+        .error-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .error-header {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .error-message {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .btn-home {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #f5c6cb;
+            color: #721c24;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: 1px solid #f5c6cb;
+        }
+        .btn-home:hover {
+            background-color: #f1aeb1;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-header">Error Sending Email</h1>
+        <p class="error-message">{{ message }}</p>
+        <a href="/" class="btn-home">Return to Home</a>
+    </div>
+</body>
+</html>

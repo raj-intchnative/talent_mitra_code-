@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sent</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #d4edda; /* Light green background for success */
+            color: #155724; /* Dark green text for success message */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .success-container {
+            text-align: center;
+            background-color: #ffffff; /* White background for the card */
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #c3e6cb; /* Soft green button background */
+            color: #155724; /* Dark green text for button */
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #a5d6a7; /* Slightly darker green on hover */
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <h1>Email Sent Successfully</h1>
+        <p>The email has been sent to {{ email_to }}</p>
+        <a href="/" class="btn">Return to Home</a>
+    </div>
+</body>
+</html>
