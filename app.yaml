@@ -1,0 +1,14 @@
+runtime: python311  # Use the Python version you are using
+entrypoint: gunicorn -b :$PORT TalentMitra.wsgi
+
+
+env_variables:
+  DJANGO_SETTINGS_MODULE: "TalentMitra.settings"
+  GOOGLE_APPLICATION_CREDENTIALS: "/secrets/django-credentials"
+
+
+handlers:
+- url: /static
+  static_dir: static/
+- url: /.*
+  script: auto
